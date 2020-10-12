@@ -1,0 +1,262 @@
+[
+  {
+    "model_file": "1real/models/detection_model-ex-002--loss-0034.204.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.006673169567101282
+    },
+    "map": 0.006673169567101282
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-003--loss-0029.778.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.032133079392751736
+    },
+    "map": 0.032133079392751736
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-004--loss-0022.663.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.5295020628128274
+    },
+    "map": 0.5295020628128274
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-005--loss-0019.206.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.5644786312380169
+    },
+    "map": 0.5644786312380169
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-006--loss-0016.839.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.6397352493306695
+    },
+    "map": 0.6397352493306695
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-007--loss-0015.934.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.5864579699520449
+    },
+    "map": 0.5864579699520449
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-008--loss-0014.985.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.6250105532674022
+    },
+    "map": 0.6250105532674022
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-009--loss-0014.001.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.5314856198122215
+    },
+    "map": 0.5314856198122215
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-010--loss-0013.516.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.674630903264607
+    },
+    "map": 0.674630903264607
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-011--loss-0013.025.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.8097740605654382
+    },
+    "map": 0.8097740605654382
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-012--loss-0012.781.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.6981011200271396
+    },
+    "map": 0.6981011200271396
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-013--loss-0012.476.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.7351306222097358
+    },
+    "map": 0.7351306222097358
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-014--loss-0012.153.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.5736816292858931
+    },
+    "map": 0.5736816292858931
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-015--loss-0011.906.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.788251785784539
+    },
+    "map": 0.788251785784539
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-016--loss-0011.389.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.7611032542663769
+    },
+    "map": 0.7611032542663769
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-018--loss-0011.252.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.7887702181890464
+    },
+    "map": 0.7887702181890464
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-019--loss-0011.055.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.6623990646059872
+    },
+    "map": 0.6623990646059872
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-020--loss-0010.926.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.6282401930965729
+    },
+    "map": 0.6282401930965729
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-021--loss-0010.619.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.8408633516027737
+    },
+    "map": 0.8408633516027737
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-022--loss-0010.540.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.8796849780152971
+    },
+    "map": 0.8796849780152971
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-023--loss-0010.165.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.8329084702521732
+    },
+    "map": 0.8329084702521732
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-025--loss-0010.103.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.8299564817192642
+    },
+    "map": 0.8299564817192642
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-026--loss-0009.709.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.787072923456311
+    },
+    "map": 0.787072923456311
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-027--loss-0009.704.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.7491663694982535
+    },
+    "map": 0.7491663694982535
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-029--loss-0008.857.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.8118750484916264
+    },
+    "map": 0.8118750484916264
+  },
+  {
+    "model_file": "1real/models/detection_model-ex-030--loss-0008.458.h5",
+    "using_iou": 0.5,
+    "using_object_threshold": 0.3,
+    "using_non_maximum_suppression": 0.5,
+    "average_precision": {
+      "1real": 0.777286133890944
+    },
+    "map": 0.777286133890944
+  }
+]
