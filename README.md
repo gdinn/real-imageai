@@ -29,6 +29,10 @@ from PIL import Image, ImageDraw, ImageFont
     Using TensorFlow backend.
 
 
+## Downloads adicionais
+### yolo.h5
+Para baixar o arquivo yolo.h5, acesse [esse link](https://github.com/OlafenwaMoses/ImageAI/releases/tag/1.0/). Esse download é necessário caso haja interesse em criar um novo modelo.  
+  
 ## Funções
   
 ### trasnform_points_rect(width: number, heigh: number, points: list),
