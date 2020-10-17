@@ -3,3 +3,4 @@ custom_model/
 .ipynb_checkpoints/
 over/
 models/yolo.h5
+images_out/
