@@ -1,15 +1,17 @@
 # Computer Vision zero to hero: A tutorial about coin recognition
-Computer vision is interesting, huh? Have you seen the demos of x, y, and z?  
-However, it's common when there are no pre-trained models, no benchmark datasets, no easy to follow tutorials, and you don't have a whole team to develop wonderful machine learning models. #review  
+Computer vision is interesting, huh? Have you seen the demos of Pulse [1] or NVIDIA Maxine [2]?  
+However, it's common when there are no pre-trained models for your task, no benchmark datasets, no easy to follow tutorials, and you don't have a whole team to develop wonderful machine learning models. #review  
 How to achieve, in a very short time and with little prior knowledge, acceptable results that may serve as proof of concept?  
 In this tutorial you'll learn this process end to end, following a practical example about coin recognition  
 
 ----
 
 ## Reducing the scope
-4 coin to 1  
-Easy lighting  
-Small occlusion  
+Our objective is simple: to indentify brazilian coins. 
+Well... not that simple: there are 4 different types of coin, that can be rusted or in bad condition, which may be partially ocluded in the photo, the scenes can vary greatly in illumination, among other challanges.
+So we decided to reduce the scope of the project to the bare minimum, the simplest feature that could demonstrate that the idea could work: to identify one type of coin (the one of 1 brazilian real, as shown in Figure 1), in clear and "easy" photographs.
+
+[[Figure 1]]
 
 ## Choosing the technologies
 Do not reinvent the wheel  
@@ -33,3 +35,7 @@ You don't want, now, to spend much time training or to pay a small fortune in cl
 ## Reporting and communicating
 If your model can save time or help someone to do its job, it already worth the effort. Your model doesn't need human-level precision to be useful.
 Be clear, explain your metric, understand what was done (this is not an extensive tutorial in theoretical background, but we highly recommend you to go deeper and understand what was done), show that there is still a lot of room for improvement and this was just an initial result
+
+# References
+[1] - Pulse, http://pulse.cs.duke.edu/
+[2] - NVIDIA Maxine, https://blogs.nvidia.com/blog/2020/10/05/gan-video-conferencing-maxine/
