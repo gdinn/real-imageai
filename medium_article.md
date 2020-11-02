@@ -1,5 +1,3 @@
->> Você quer colocar um pouco dos códigos no meio do texto? Ou só texto e imagem mesmo? 
-
 # Computer Vision zero to hero: A tutorial about coin recognition
 Computer vision is interesting, huh? Have you seen the demos of Pulse [1] or NVIDIA Maxine [2]?  
 However, it's common when there are no pre-trained models for your task, no benchmark datasets, no easy to follow tutorials, and you don't have a whole team to develop wonderful machine learning models. 
@@ -39,7 +37,17 @@ Word of advice: The labeling process is very long and trust me, this needs to be
 >> botar um print da interface de labeling
 
 ## Training a model
-You don't want, now, to spend much time training or to pay a small fortune in cloud computing. Furthermore, you don't want to perform a careful fine-tuning in the model, you just need an acceptable precision (that, for most problems, is much lower than the state of the art)
+You don't want, now, to spend much time training or to pay a small fortune in cloud computing. Furthermore, you don't want to perform a careful fine-tuning in the model, you just need an acceptable precision (that, for most problems, is much lower than the state of the art). After the envoriment setup, the code itself are just 6 lines (declare the neural network arquitecture to be used, point to the data, set hyperparameters, start training):
+
+```
+from imageai.Detection.Custom import DetectionModelTrainer
+
+trainer = DetectionModelTrainer()
+trainer.setModelTypeAsYOLOv3()
+trainer.setDataDirectory(data_directory="hololens")
+trainer.setTrainConfig(object_names_array=["hololens"], batch_size=4, num_experiments=100, train_from_pretrained_model="pretrained-yolov3.h5")
+trainer.trainModel()
+```
 
 We'll use a famous architecture, YoloV3, pretrained on a famous dataset, ImageNet. This will speed up the training and make it easier to get good results, that is exactly what we want. Comparing with this [example](https://imageai.readthedocs.io/en/latest/customdetection/) of the ImageAI library, they've used 400 epochs in a dataset of 300 images, taking 300s per epoch. In our case, we used 30 epochs with 3000s each. WHY? Because our images were HUGE, and the higher the resolution the higher will be the training time. Lesson learned: use images as clear as you can get and with a resolution that capture all the details you need, but NOT MORE than that.
 
