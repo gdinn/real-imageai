@@ -1,11 +1,9 @@
 # Computer Vision zero to hero: A tutorial about coin recognition
+
 Computer vision is interesting, huh? Have you seen the demos of Pulse [1] or NVIDIA Maxine [2]?  
 However, it's common when there are no pre-trained models for your task, no benchmark datasets, no easy to follow tutorials, and you don't have a whole team to develop wonderful machine learning models. 
->> review  
-How to achieve, in a very short time and with little prior knowledge, acceptable results that may serve as proof of concept?  
-In this tutorial you'll learn this process end to end, following a practical example about coin recognition  
 
-----
+How to achieve, in a very short time and with little prior knowledge, acceptable results that may serve as proof of concept? In this tutorial you'll learn this process end to end, following a practical example about coin recognition  
 
 ## Reducing the scope
 Our objective is simple: to identify Brazilian coins. 
@@ -27,14 +25,14 @@ To label de dataset, we chosed the library labelImg [4] because yyy
 You already defined your scope, now: what type of data you need to represent the information you need?  
 In our case will be enough to have photos of several coins on the table and on our hand, taken with a cellphone camera (today's cellphone have nice cameras to do tasks like this), with bounding boxes around the one of 1 real (1BRL). 
 
->> botar alguma imagem boa com o bounding box
+![img](images_article/labeled_example.png)
 
 We decided to annotate 250 images, but it was just a guess: you may need more, you may need less, you may have to label more data after trying to train the model and not achieving good enough results, it depends.  
 We'll use this data to train our model, but how we'll know how well it will be when faced with new data, in a real situation?  
 We may want to label more data in the future and compare the model's predictions with our own labels. It's a good idea, but why not label this "test dataset" just now? Even better, why not just hold out part of the already labeled dataset, excluding it from training and using it only for testing?  
 Word of advice: The labeling process is very long and trust me, this needs to be done right. So take your time, put some music on and do this with attention.  
 
->> botar um print da interface de labeling
+![img](images_article/labelimg.png)
 
 ## Training a model
 You don't want, now, to spend much time training or to pay a small fortune in cloud computing. Furthermore, you don't want to perform a careful fine-tuning in the model, you just need an acceptable precision (that, for most problems, is much lower than the state of the art). After the envoriment setup, the code itself are just 6 lines (declare the neural network arquitecture to be used, point to the data, set hyperparameters, start training):
