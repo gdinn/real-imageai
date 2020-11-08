@@ -16,10 +16,8 @@ So we decided to reduce the scope of the project to the bare minimum, the simple
 What will we use? Which languages, frameworks, development environments? 
 We are looking for technologies easy to understand, with acceptable results, with good documentation and tutorials. 
 You may change it in the future when faced with constraints like computational performance or easiness to deploy, but now the focus is just to prove that your project can be done. We don't need to reinvent the wheel. 
-Among several options, the framework ImageAI [3] fits well our needs: it is xxxxx
->> Por quê você escolheu a imageai? Você vei alguma comparação legal com outras bibliotecas (performance, flexibilidade, facilidade de aprendizado, etc)? 
-To label de dataset, we chosed the library labelImg [4] because yyy
->> Novamente, algum bom argumento do por quê? 
+Among several options, the framework ImageAI [3] fits well our needs: it is easy to learn, very little boilerplate, very good documentation and expectacular results. Comparing to other libs, ImageAI was the easiest to learn and with the best results.  
+To label de dataset, we chosed the library labelImg [4] because it is a open source solution with very little learning curve and had all the functionalities needed.  
 
 ## Labeling a dataset
 You already defined your scope, now: what type of data you need to represent the information you need?  
@@ -47,11 +45,18 @@ trainer.setTrainConfig(object_names_array=["hololens"], batch_size=4, num_experi
 trainer.trainModel()
 ```
 
-We'll use a famous architecture, YoloV3, pretrained on a famous dataset, ImageNet. This will speed up the training and make it easier to get good results, that is exactly what we want. Comparing with this [example](https://imageai.readthedocs.io/en/latest/customdetection/) of the ImageAI library, they've used 400 epochs in a dataset of 300 images, taking 300s per epoch. In our case, we used 30 epochs with 3000s each. WHY? Because our images were HUGE, and the higher the resolution the higher will be the training time. Lesson learned: use images as clear as you can get and with a resolution that capture all the details you need, but NOT MORE than that.
+We'll use a famous architecture, YoloV3, pretrained on a famous dataset, ImageNet. This will speed up the training and make it easier to get good results, that is exactly what we want. Comparing with this [example](https://imageai.readthedocs.io/en/latest/customdetection/) of the ImageAI library, they've used 400 epochs in a dataset of 300 images, taking 300s per epoch. In our case, we used 30 epochs with 3000s each. WHY? Because our images were HUGE, and the higher the resolution the higher will be the training time. Lesson learned: use images as clear as you can get and with a resolution that capture all the details you need, but NOT MORE than that.  
+NOTICE: The relation 1epoch/3000s is based on my computer. Imagining that the example on the ImageAI docs are made on a home computer also, the previous assertion is true. If not, my advice is still the same: Images big enough only to capture the details you need. The time consumed per epoch will be lower, but not on a relation as the one I compared before.  
+  
+Well... And how many epochs did I need?  
+  
+Since the ImageAI lib itself will change the machine learning params, the more the better. A good number, to start, is 25. After all measures, you will need to run a efficiency measure script, which will use the test images to verify the precision of our model.
 
->> Cuidado: eles demoraram 300s/epoch em um computador diferente do teu, talvez a comparação não seja válida. A lição aprendida é boa, mas talvez a comparação direta seja enganosa
+Doing that, with 25 epochs, the precision obtained in the process was:  
+  
+![img](images_article/precision_epochs.png)
 
->> Você têm algum gráfico do processo de treinamento, tipo precisão vs epochs? 
+Which we can see that started very poorly but improved until the peak value of 0.87 on the 20th epoch.
 
 ## Reporting and communicating
 For proof of concept, we have already achieved a lot. Our model doesn't need human-level precision to be useful: if it can save time or help someone to do its job, it already worth the effort
