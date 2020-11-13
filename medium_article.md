@@ -14,10 +14,9 @@ So we decided to reduce the scope of the project to the bare minimum, the simple
 
 ## Choosing the technologies
 What will we use? Which languages, frameworks, development environments? 
-We are looking for technologies easy to understand, with acceptable results, with good documentation and tutorials. 
-You may change it in the future when faced with constraints like computational performance or easiness to deploy, but now the focus is just to prove that your project can be done. We don't need to reinvent the wheel. 
-Among several options, the framework ImageAI [3] fits well our needs: it is easy to learn, very little boilerplate, very good documentation and expectacular results. Comparing to other libs, ImageAI was the easiest to learn and with the best results.  
-To label de dataset, we chosed the library labelImg [4] because it is a open source solution with very little learning curve and had all the functionalities needed.  
+We are looking for technologies easy to understand, with acceptable results, with good documentation and tutorials. You may change it in the future when faced with constraints like computational performance or easiness to deploy, but now the focus is just to prove that your project can be done. We don't need to reinvent the wheel. 
+Among several options, the framework ImageAI [3] fits well our needs: it is easy to learn, very little boilerplate, very good documentation and spectacular results. Comparing to other libs, ImageAI was the easiest to learn and with the best results.  
+To label de dataset, we chose the library labelImg [4] because it is an open-source solution with an easy learning curve and had all the functionalities needed.  
 
 ## Labeling a dataset
 You already defined your scope, now: what type of data you need to represent the information you need?  
@@ -33,7 +32,7 @@ Word of advice: The labeling process is very long and trust me, this needs to be
 ![img](images_article/labelimg.png)
 
 ## Training a model
-You don't want, now, to spend much time training or to pay a small fortune in cloud computing. Furthermore, you don't want to perform a careful fine-tuning in the model, you just need an acceptable precision (that, for most problems, is much lower than the state of the art). After the envoriment setup, the code itself are just 6 lines (declare the neural network arquitecture to be used, point to the data, set hyperparameters, start training):
+You don't want, now, to spend much time training or to pay a small fortune in cloud computing. Furthermore, you don't want to perform a careful fine-tuning in the model, you just need an acceptable precision (that, for most problems, is much lower than the state of the art). After the environment setup, the code itself is just 6 lines (declare the neural network architecture to be used, point to the data, set hyperparameters, start training):
 
 ```
 from imageai.Detection.Custom import DetectionModelTrainer
@@ -45,12 +44,11 @@ trainer.setTrainConfig(object_names_array=["hololens"], batch_size=4, num_experi
 trainer.trainModel()
 ```
 
-We'll use a famous architecture, YoloV3, pretrained on a famous dataset, ImageNet. This will speed up the training and make it easier to get good results, that is exactly what we want. Comparing with this [example](https://imageai.readthedocs.io/en/latest/customdetection/) of the ImageAI library, they've used 400 epochs in a dataset of 300 images, taking 300s per epoch. In our case, we used 30 epochs with 3000s each. WHY? Because our images were HUGE, and the higher the resolution the higher will be the training time. Lesson learned: use images as clear as you can get and with a resolution that capture all the details you need, but NOT MORE than that.  
-NOTICE: The relation 1epoch/3000s is based on my computer. Imagining that the example on the ImageAI docs are made on a home computer also, the previous assertion is true. If not, my advice is still the same: Images big enough only to capture the details you need. The time consumed per epoch will be lower, but not on a relation as the one I compared before.  
+We'll use a famous architecture, YoloV3, pretrained on a famous dataset, ImageNet. This will speed up the training and make it easier to get good results, that is exactly what we want. Comparing with this [example](https://imageai.readthedocs.io/en/latest/customdetection/) of the ImageAI library, they've used 400 epochs in a dataset of 300 images, taking 300s per epoch. In our case, we used 30 epochs with 3000s each. WHY? Because our images were HUGE, and the higher the resolution the higher will be the training time. Lesson learned: use images as clear as you can get and with a resolution that captures all the details you need, but NOT MORE than that.  
+Notice: The relation 1epoch/3000s is based on my computer. Assuming that the example on the ImageAI docs was made on a home computer also, the previous assertion is true. If not, my advice is still the same: images big enough only to capture the details you need. The time consumed per epoch will be lower, but not in the same proportion as the one I compared before.  
   
 Well... And how many epochs did I need?  
-  
-Since the ImageAI lib itself will change the machine learning params, the more the better. A good number, to start, is 25. After all measures, you will need to run a efficiency measure script, which will use the test images to verify the precision of our model.
+Since the ImageAI lib itself will change the machine learning params, the more the better. A good number, to start, is 25. Then you will need to run an evaluation script, which will use the test images to verify the precision of our model.
 
 Doing that, with 25 epochs, the precision obtained in the process was:  
   
@@ -62,7 +60,7 @@ Which we can see that started very poorly but improved until the peak value of 0
 For proof of concept, we have already achieved a lot. Our model doesn't need human-level precision to be useful: if it can save time or help someone to do its job, it already worth the effort
 So it's DONE!!
 Not yet.
-If you want to keep working on the model (and there is still a lot of room for improvements), you'll probably have to *convince* others that your time worth the effort. Specifically to coin recognition, machine learning probably is the best approach to follow, but for most real problems the decision is much less clear, so you have to carefully analyze your results and the methodology that led to them in order to decide how to continue.
+If you want to keep working on the model (and there is still a lot of room for improvements), you'll probably have to *convince* others that your time worth the effort. Particularly to coin recognition, machine learning probably is the best approach to follow, but for most real problems the decision is much less clear, so you have to carefully analyze your results and the methodology that led to them in order to decide how to continue.
 Here are some post-development tips:
 * Clearly identify the procedures done to get your results (something like what we are doing here);
 * Explain your evaluation metrics, and what they mean in a practical context;
